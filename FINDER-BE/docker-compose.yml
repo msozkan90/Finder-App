@@ -35,13 +35,15 @@ services:
       - .:/app
       - /app/node_modules
     ports:
-      - '3000:3000'
+      - '5000:5000'
     env_file:
       - .env
     depends_on:
       - mongo
       - redis
       - elasticsearch
+    command: >
+      /bin/sh -c "node src/utils/bulkCreateUsers.js && nodemon src/index.js"
 
 volumes:
   mongo-data:

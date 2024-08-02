@@ -37,6 +37,6 @@ const createBulkUsers = async (numUsers) => {
   console.log(`${numUsers} users created`);
 };
 
-createBulkUsers(500)
+createBulkUsers(300)
   .then(() => mongoose.disconnect())
   .catch(err => console.error('Error creating users:', err));

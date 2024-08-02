@@ -98,7 +98,7 @@ io.on('connection', (socket) => {
   });
 });
 
-const PORT = db.port || 3000;
+const PORT = db.port || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 module.exports = { app, io };
